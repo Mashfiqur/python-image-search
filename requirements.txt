@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+asyncpg
+databases
+pillow
+sentence-transformers
+numpy
+requests

@@ -1,4 +1,5 @@
 version: "3.9"
+
 services:
   web:
     build: .
@@ -7,9 +8,10 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: postgres://postgres:password@db/postgres
+      DATABASE_URL: postgresql+psycopg2://postgres:password@db:5432/postgres
+      # DATABASE_URL: postgresql+psycopg2://postgres:password@localhost:5445/postgres
     volumes:
-      - .:/app  # Bind the current directory to the container's /app
+      - .:/app
       
   db:
     image: postgres:15

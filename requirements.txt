@@ -6,3 +6,5 @@ pillow
 sentence-transformers
 numpy
 requests
+psycopg2-binary
+python-multipart
